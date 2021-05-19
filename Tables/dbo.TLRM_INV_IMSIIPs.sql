@@ -1,0 +1,15 @@
+﻿CREATE TABLE [dbo].[TLRM_INV_IMSIIPs] (
+  [imsi] [varchar](250) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+  [ip] [varchar](250) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+  [apn] [varchar](250) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+  CONSTRAINT [PK_TLRM_INV_IMSIIPs] PRIMARY KEY CLUSTERED ([imsi]) WITH (PAD_INDEX = ON, FILLFACTOR = 60)
+)
+ON [PRIMARY]
+GO
+
+CREATE INDEX [NonClusteredIndex-20201027-111627]
+  ON [dbo].[TLRM_INV_IMSIIPs] ([ip])
+  INCLUDE ([apn])
+  WITH (PAD_INDEX = ON, FILLFACTOR = 60)
+  ON [PRIMARY]
+GO

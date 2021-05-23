@@ -2,6 +2,7 @@
 <StaticDataList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Version>2</Version>
   <StaticDataLinks>
+    <StaticDataLink>dbo._add_tele2</StaticDataLink>
     <StaticDataLink>dbo.TLRM_INV_IMSIIPs</StaticDataLink>
   </StaticDataLinks>
 </StaticDataList>
